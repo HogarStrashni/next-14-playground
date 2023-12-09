@@ -1,3 +1,5 @@
+export type ApiResponse = [User[], Post[], Comment[]];
+
 export type User = {
 	id: number;
 	name: string;
