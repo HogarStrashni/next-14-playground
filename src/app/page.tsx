@@ -9,7 +9,7 @@ const Home: FC = async () => {
 
 	return (
 		<div className={styles.wrapper}>
-			<h1>Welcome to PostApp</h1>
+			<h1>Welcome to PostsApp</h1>
 			<p>Select a user to see their posts</p>
 			<Select usersData={usersData} />
 		</div>
