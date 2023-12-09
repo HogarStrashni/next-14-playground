@@ -1,8 +1,14 @@
 .header {
 	display: flex;
-	max-width: 1400px;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0rem 1rem;
 	border-bottom: 1px solid white;
+}
+
+.notification {
+	border: 1px solid;
+	padding: 0.5rem 2rem;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
 }
