@@ -18,7 +18,7 @@ const Select: FC<SelectProps> = ({ usersData }) => {
 				name="userId"
 				className={styles.select}
 				onChange={() => {
-					formRef.current?.submit();
+					formRef.current?.requestSubmit();
 					formRef.current?.reset();
 				}}
 			>

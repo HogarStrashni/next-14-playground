@@ -81,8 +81,6 @@
 
 html,
 body {
-	max-width: 1400px;
-	overflow-x: hidden;
 	margin: 0 auto;
 }
 
@@ -110,4 +108,5 @@ a {
 .main {
 	flex: 1;
 	padding: 1rem;
+	max-width: 1400px
 }

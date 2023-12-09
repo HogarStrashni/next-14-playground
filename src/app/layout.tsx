@@ -15,9 +15,6 @@ export const metadata: Metadata = {
 
 type RootLayoutProps = {
 	children: React.ReactNode;
-	params: {
-		userId: number;
-	};
 };
 
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
