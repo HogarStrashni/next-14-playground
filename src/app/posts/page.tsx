@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import { getAllComments, getAllPosts, getAllUsers } from '@/utils';
 import { Comment, Post, User } from '@/types';
+import PostCard, { PostCardProps } from '@/components/posts/post-card';
 
 type ApiResponse = [User[], Post[], Comment[]];
 
@@ -22,7 +23,9 @@ const PostsPage: FC = async () => {
 		comments: allCommentData.filter((comment) => comment.postId === post.id)
 	}));
 
-	return <pre>{JSON.stringify(allPostsWithComments, null, 2)}</pre>;
+	return allPostsWithComments.map((item) => (
+		<PostCard key={item.id} postData={item} />
+	));
 };
 
 export default PostsPage;

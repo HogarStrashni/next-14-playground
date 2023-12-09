@@ -1,14 +1,9 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import styles from './header.module.css';
-import { User } from '@/types';
-import CurrentUser from './current-user';
 import Link from 'next/link';
 
-const Header: FC = async () => {
-	const resp = await fetch('https://jsonplaceholder.typicode.com/users');
-	const usersData = (await resp.json()) as User[];
-
+const Header: FC = () => {
 	return (
 		<header className={styles.header}>
 			<Link href="/">
@@ -20,7 +15,6 @@ const Header: FC = async () => {
 					priority={true}
 				/>
 			</Link>
-			<CurrentUser usersData={usersData} />
 		</header>
 	);
 };
