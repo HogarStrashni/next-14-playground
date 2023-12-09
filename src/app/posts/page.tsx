@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { getAllComments, getAllPosts, getAllUsers } from '@/utils';
 import { Comment, Post, User } from '@/types';
-import PostCard, { PostCardProps } from '@/components/posts/post-card';
+import PostCard from '@/components/post/post-card';
 
 type ApiResponse = [User[], Post[], Comment[]];
 

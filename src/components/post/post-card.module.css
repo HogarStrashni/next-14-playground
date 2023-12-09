@@ -1,0 +1,19 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.card_header {
+	width: 100%;
+	padding-bottom: 0.25rem;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #666;
+}
