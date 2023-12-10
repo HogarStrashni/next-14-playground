@@ -11,8 +11,6 @@ const SearchInput = () => {
 		setQuery(searchTerm ? searchTerm : null);
 	}, 400);
 
-	console.log(query);
-
 	return (
 		<div className={styles.wrapper_div}>
 			<input

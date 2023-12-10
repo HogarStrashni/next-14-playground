@@ -11,11 +11,11 @@ type PostsPageProps = {
 	};
 };
 
-const PostsPage: FC<PostsPageProps> = async ({ searchParams }) => {	
+const PostsPage: FC<PostsPageProps> = async ({ searchParams }) => {
 	const allPostsAndComments = await getData();
-	
+
 	if (!allPostsAndComments) return notFound();
-	
+
 	const searchTerm = searchParams?.query;
 	const filteredPosts = searchTerm
 		? allPostsAndComments.filter(
