@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './post-card.module.css';
 import { Comment } from '@/types';
 
-import CommentCard from '../comment';
+import CommentCard from '../comment-card';
 import Link from 'next/link';
 
 export type PostCardProps = {
