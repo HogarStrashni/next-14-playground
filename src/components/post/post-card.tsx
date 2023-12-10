@@ -23,7 +23,9 @@ const PostCard: FC<PostCardProps> = ({ postData }) => {
 			<Link href={`/post/${id}`}>
 				<div className={styles.wrapper}>
 					<div className={styles.card_header}>
-						<p>{title}</p>
+						<p>
+							#{id} {title}
+						</p>
 						<p>Author: {userName}</p>
 					</div>
 

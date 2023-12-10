@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { getAllData } from '@/utils';
+import { getData } from '@/utils';
 
 import PostCard from '@/components/post/post-card';
 
@@ -10,11 +10,11 @@ type PostPageProps = {
 };
 
 const PostPage: FC<PostPageProps> = async ({ params }) => {
-	const allPostsWithComments = await getAllData(params.postId);
+	const postAndComments = (await getData(params.postId)).find((item) => item);
 
-	console.log(allPostsWithComments);
+	if (!postAndComments) return;
 
-	return <div>Hello</div>;
+	return <PostCard postData={postAndComments} />;
 };
 
 export default PostPage;
