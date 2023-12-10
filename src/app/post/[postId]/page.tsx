@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { getData } from '@/utils';
 
-import PostCard from '@/components/post/post-card';
+import PostCard from '@/components/post-card/post-card';
+import { notFound } from 'next/navigation';
 
 type PostPageProps = {
 	params: {
@@ -12,7 +13,7 @@ type PostPageProps = {
 const PostPage: FC<PostPageProps> = async ({ params }) => {
 	const postAndComments = (await getData(params.postId)).find((item) => item);
 
-	if (!postAndComments) return;
+	if (!postAndComments) return notFound();
 
 	return <PostCard postData={postAndComments} />;
 };
