@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import styles from './header.module.css';
 import Link from 'next/link';
+import SearchField from '../search-field';
 
 const Header: FC = () => {
 	return (
@@ -15,6 +16,7 @@ const Header: FC = () => {
 					priority={true}
 				/>
 			</Link>
+			<SearchField />
 		</header>
 	);
 };
